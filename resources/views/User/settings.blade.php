@@ -69,25 +69,20 @@
 </head>
 
 <body class="bg-background-main text-slate-900 min-h-screen flex">
-    <x-user-sliderbar>
-        <x-user-sliderbar />
-        <main class="flex-1 mr-64">
-            <header class="bg-white px-10 py-6 flex justify-between items-center shadow-sm sticky top-0 z-10">
-                <div class="flex flex-col">
-                    <h2 class="text-2xl font-black text-slate-800">الإعدادات</h2>
-                    <p class="text-sm text-slate-500">إدارة حسابك وتفضيلاتك الشخصية</p>
-                </div>
-                <div class="flex items-center gap-4">
-                    <button class="p-2 text-slate-400 hover:text-primary transition-colors relative">
-                        <a href="notifications2.html"><span class="material-symbols-outlined">notifications</span></a>
-                        <span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full"></span>
-                    </button>
+    @php
+        $user = auth()->user();
+        $userName = $user?->name ?: 'غير مضاف';
+        $userEmail = $user?->email ?: 'غير مضاف';
+        $userPhone = data_get($user, 'phone') ?: data_get($user, 'mobile') ?: 'غير مضاف';
+    @endphp
 
-                    <div class="w-10 h-10 rounded-full bg-slate-200 border-2 border-primary/20" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDxzxtrnnTRyxDxG-SM9Lw_YspAaDGeh8sH84v3tNmPNi3z4dBxS17gS75slAofb8CzdDIxGm-ZvJEJfgntpSYH2Th4Xg-LcE_OhijfBUM2EuSjulQ1Ah91jnBTC1oOTHSXFcMlHFEJFBo8_0aSRChtO4UL_UVI4GLY3KvYGNXd6_vUVQEZPPHbozFZLFRavc3H_FMSco_3W3QZ4pQaZpaZOAuzE5K33gt5rYc28q_KOcQlPxJJirIy3TFomFoHNaRCLYX6KQnADKY"); background-size: cover;'></div>
-                </div>
-                </div>
-            </header>
-            <div class="p-10 max-w-4xl mx-auto">
+    <x-user-slider />
+    <main class="flex-1 mr-64">
+    
+
+        <x-user-header title="الإعدادات" />
+
+        <div class="p-10 max-w-4xl mx-auto">
                 <div class="settings-card">
                     <h3 class="section-title">
                         <span class="material-symbols-outlined text-primary">person</span>
@@ -97,21 +92,21 @@
                         <div>
                             <label class="input-label">الاسم الكامل</label>
                             <div class="relative">
-                                <input id="fullNameInput" class="input-field" readonly type="text" value="أحمد محمد علي" />
+                                <input id="fullNameInput" class="input-field" readonly type="text" value="{{ $userName }}" />
                                 <button id="editNameBtn" class="absolute left-3 top-2.5 text-primary text-sm font-bold">تعديل</button>
                             </div>
                         </div>
                         <div>
                             <label class="input-label">البريد الإلكتروني</label>
                             <div class="relative">
-                                <input id="emailInput" class="input-field" readonly type="email" value="ahmed.m@example.com" />
+                                <input id="emailInput" class="input-field" readonly type="email" value="{{ $userEmail }}" />
                                 <button id="editEmailBtn" class="absolute left-3 top-2.5 text-primary text-sm font-bold">تعديل</button>
                             </div>
                         </div>
                         <div>
                             <label class="input-label">رقم الهاتف</label>
                             <div class="relative">
-                                <input id="phoneInput" class="input-field" dir="ltr" readonly type="tel" value="+966 50 123 4567" />
+                                <input id="phoneInput" class="input-field" dir="ltr" readonly type="tel" value="{{ $userPhone }}" />
                                 <button id="editPhoneBtn" class="absolute left-3 top-2.5 text-primary text-sm font-bold">تعديل</button>
                             </div>
                         </div>

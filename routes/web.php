@@ -54,4 +54,9 @@ Route::view('/reportdetail', 'admin.reportdetail')->name('reportdetail');
 Route::view('/storiesmange', 'admin.storiesmange')->name('storiesmange');
 Route::view('/systemsettings', 'admin.systemsettings')->name('systemsettings');
 Route::view('/usermanage', 'admin.usermanage')->name('usermanage');
+
+//order
+Route::view('/order', 'Order.orders')->name('order');
+Route::view('/orderdetails', 'Order.needdashboard')->name('orderdetails');
+
 require __DIR__ . '/auth.php';
