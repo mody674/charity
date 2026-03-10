@@ -33,5 +33,6 @@ Route::view('/storiesmange', 'User.storiesmange')->name('storiesmange');
 Route::view('/donate', 'User.donate')->name('donate');
 Route::view('/dontes', 'User.dontes')->name('dontes');
 Route::view('/home', 'User.home')->name('home');
+Route::view('/settings', 'User.settings')->name('settings');
 
 require __DIR__.'/auth.php';

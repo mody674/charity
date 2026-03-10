@@ -21,7 +21,7 @@
 <span class="material-symbols-outlined">auto_awesome</span>
 <span class="font-bold">قصص الأثر</span>
 </a>
-<a class="sidebar-item" href="settings.html">
+<a class="sidebar-item" href="{{url('settings')}}">
 <span class="material-symbols-outlined">settings</span>
 <span class="font-bold">الإعدادات</span>
 </a>
