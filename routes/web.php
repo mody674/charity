@@ -34,4 +34,12 @@ Route::view('/donate', 'User.donate')->name('donate');
 Route::view('/dontes', 'User.dontes')->name('dontes');
 Route::view('/home', 'User.home')->name('home');
 
+
+//land 
+Route::view('/index', 'land.index')->name('index');
+Route::view('/aboutus', 'land.aboutus')->name('aboutus');
+Route::view('/chances', 'land.chances')->name('chances');
+Route::view('/contact', 'land.contact')->name('contact');
+Route::view('/privacy', 'land.privacy')->name('privacy');
+Route::view('/readmore', 'land.readmore')->name('readmore');
 require __DIR__.'/auth.php';
