@@ -43,4 +43,15 @@ Route::view('/chances', 'land.chances')->name('chances');
 Route::view('/contact', 'land.contact')->name('contact');
 Route::view('/privacy', 'land.privacy')->name('privacy');
 Route::view('/readmore', 'land.readmore')->name('readmore');
-require __DIR__.'/auth.php';
+
+
+//admin
+Route::view('/admindashboard', 'admin.admindashboard')->name('admindashboard');
+Route::view('/projectmanagement', 'admin.projectmanagement')->name('projectmanagement');
+Route::view('/donatesmanage', 'admin.donatesmanage')->name('donatesmanage');
+Route::view('/reports', 'admin.reports')->name('reports');
+Route::view('/reportdetail', 'admin.reportdetail')->name('reportdetail');
+Route::view('/storiesmange', 'admin.storiesmange')->name('storiesmange');
+Route::view('/systemsettings', 'admin.systemsettings')->name('systemsettings');
+Route::view('/usermanage', 'admin.usermanage')->name('usermanage');
+require __DIR__ . '/auth.php';
