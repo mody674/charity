@@ -58,5 +58,6 @@ Route::view('/usermanage', 'admin.usermanage')->name('usermanage');
 //order
 Route::view('/order', 'Order.orders')->name('order');
 Route::view('/orderdetails', 'Order.needdashboard')->name('orderdetails');
+Route::view('/needask', 'Order.needask')->name('needask');
 
 require __DIR__ . '/auth.php';
