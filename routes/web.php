@@ -27,14 +27,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
-Route::view('/stories', 'User.stories')->name('stories');
-Route::view('/storiesmange', 'User.storiesmange')->name('storiesmange');
-Route::view('/donate', 'User.donate')->name('donate');
-Route::view('/dontes', 'User.dontes')->name('dontes');
-Route::view('/home', 'User.home')->name('home');
-Route::view('/settings', 'User.settings')->name('settings');
+    Route::view('/stories', 'User.stories')->name('stories');
+    Route::view('/storiesmange', 'User.storiesmange')->name('storiesmange');
+    Route::view('/donate', 'User.donate')->name('donate');
+    Route::view('/dontes', 'User.dontes')->name('dontes');
+    Route::view('/home', 'User.home')->name('home');
+    Route::view('/settings', 'User.settings')->name('settings');
 
+});    
 
 //land 
 Route::view('/index', 'land.index')->name('index');
