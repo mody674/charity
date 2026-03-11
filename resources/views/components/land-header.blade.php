@@ -7,7 +7,7 @@
                     <h2 class="text-xl font-black text-primary tracking-tight">معًا نصنع الأمل</h2>
                 </div>
                 <nav class="hidden md:flex items-center gap-10">
-                    <a class="text-slate-700 dark:text-slate-300 hover:text-primary font-medium transition-colors" href="{{url('index')}}">الرئيسية</a>
+                    <a class="text-slate-700 dark:text-slate-300 hover:text-primary font-medium transition-colors" href="{{url('/')}}">الرئيسية</a>
                     <a class="text-slate-700 dark:text-slate-300 hover:text-primary font-bold transition-colors" href="{{url('aboutus')}}">عن المؤسسة</a>
                     <a class="text-slate-700 dark:text-slate-300 hover:text-primary font-medium transition-colors" href="{{url('chances')}}">فرص التطوع</a>
                     <a class="text-slate-700 dark:text-slate-300 hover:text-primary font-medium transition-colors" href="{{url('contact')}}">اتصل بنا</a>

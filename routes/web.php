@@ -35,14 +35,6 @@ Route::middleware('auth')->group(function () {
     Route::view('/settings', 'User.settings')->name('settings');
 
 
-    //land 
-    Route::view('/index', 'land.index')->name('index');
-    Route::view('/aboutus', 'land.aboutus')->name('aboutus');
-    Route::view('/chances', 'land.chances')->name('chances');
-    Route::view('/contact', 'land.contact')->name('contact');
-    Route::view('/privacy', 'land.privacy')->name('privacy');
-    Route::view('/readmore', 'land.readmore')->name('readmore');
-
 
     //admin
     Route::view('/admindashboard', 'admin.admindashboard')->name('admindashboard');
@@ -59,5 +51,12 @@ Route::middleware('auth')->group(function () {
     Route::view('/orderdetails', 'Order.needdashboard')->name('orderdetails');
     Route::view('/needask', 'Order.needask')->name('needask');
 });
+
+//land 
+Route::view('/aboutus', 'land.aboutus')->name('aboutus');
+Route::view('/chances', 'land.chances')->name('chances');
+Route::view('/contact', 'land.contact')->name('contact');
+Route::view('/privacy', 'land.privacy')->name('privacy');
+Route::view('/readmore', 'land.readmore')->name('readmore');
 
 require __DIR__ . '/auth.php';
