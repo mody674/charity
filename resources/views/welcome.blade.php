@@ -66,11 +66,11 @@
                         <div class="flex flex-col sm:flex-row gap-4 justify-center">
                             <button class="bg-primary hover:bg-primary/90 text-white px-10 py-4 rounded-xl text-lg font-bold transition-all flex items-center justify-center gap-2 group">
                                 <span class="material-symbols-outlined group-hover:scale-110 transition-transform">favorite</span>
-                                <a href="login.html"> تبرع الآن</a>
+                                <a href="{{url('login')}}"> تبرع الآن</a>
                             </button>
                             <button class="bg-accent-orange hover:bg-accent-orange/90 text-white px-10 py-4 rounded-xl text-lg font-bold transition-all flex items-center justify-center gap-2 group shadow-xl shadow-accent-orange/20">
                                 <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">handshake</span>
-                                <a href="login.html"> اطلب مساعدة</a>
+                                <a href="{{url('login')}}"> اطلب مساعدة</a>
                             </button>
                         </div>
                     </div>
