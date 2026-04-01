@@ -14,7 +14,7 @@
                 </nav>
                 <div class="flex items-center gap-4">
                     <button class="hidden sm:flex bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full font-bold transition-all shadow-lg shadow-primary/20">
-                        <a href="login.html"> تبرع الآن</a>
+                        <a href="{{route('login')}}"> تبرع الآن</a>
                     </button>
                 </div>
             </div>
